@@ -1,0 +1,84 @@
+:root{
+    --main-color: #185ADB;
+    --secondary-color: #0A1931;
+    --tertiary-color: #E8F6EF;
+}
+.menuToggle{
+    display: block;
+    position: fixed;
+    top: 0px;
+    right: 0;
+    margin: .5em 1.5em;
+    z-index: 3;
+    padding: .5em;
+    -webkit-user-select: none;
+    user-select: none;
+    background-color: var(--secondary-color);
+}
+.menuToggle a{
+    text-decoration: none;
+    color: var(--main-color);
+}
+.menuToggle input{
+    display: block;
+    width: 40px;
+    height: 32px;
+    position: absolute;
+    top: -7px;
+    left: -5px;
+    cursor: pointer;
+    opacity: 0;
+    z-index: 4;
+    -webkit-touch-callout: none;
+}
+.menuToggle span{
+    display: block;
+    width: 33px;
+    height: 4px;
+    margin-bottom: 5px;
+    position: relative;
+    background-color: var(--main-color);
+    border-radius: 3px;
+    z-index: 3;
+    transform-origin: 4px 0px;
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
+                background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+                opacity 0.55s ease;;
+}
+.menuToggle span:first-child{
+    transform-origin: 0% 0%;
+}
+.menuToggle span:nth-child(2){
+    transform-origin: 0% 100%;
+}
+.menuToggle input:checked ~ span{
+    opacity: 1;
+    transform: rotate(45deg) translate(-2px, -1px);
+    background: var(--main-color);
+}
+.menuToggle input:checked ~ span:nth-last-child(3){
+    opacity: 0;
+    transform: rotate(0deg) scale(0.2, 0.2);
+}
+.menuToggle input:checked ~ span:nth-last-child(2){
+    transform:  rotate(-45deg) translate(0, -1px);
+}
+.menu{
+    position: absolute;
+    width: 20%;
+    margin: -100px 0 0 -50px;
+    padding: 50px;
+    padding-top: 125px;
+
+    background: var(--secondary-color);
+    list-style: none;
+    transform-origin: 0% 0%;
+    transform: translate(-100px, 0);
+}
+.menu li{
+    padding: 10px 0;
+    font-size: 22px;
+}
+.menuToggle input:checked ~ ul{
+    transform: none;
+}

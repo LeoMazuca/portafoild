@@ -1,0 +1,17 @@
+:root{
+    --main-color: #185ADB;
+    --secondary-color: #0A1931;
+    --tertiary-color: #E8F6EF;
+}
+.footer{
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    z-index: 2;
+    font-size: 2em;
+    padding: .5em 1.5em;
+    text-align: end;
+}
+.footer a{
+    color:var(--main-color);
+}
