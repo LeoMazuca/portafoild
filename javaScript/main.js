@@ -1,4 +1,4 @@
-gsap.set('.main', { background:'#fff', width:'100%', top:0,})
+gsap.set('.main', {position: "absolute", background:'#fff', width:'100%', top:0,})
 gsap.set('.scrollArea', {width:'100%', height:'150vh'})
 gsap.timeline({scrollTrigger:{trigger:'.scrollArea', start:'top top', end: '50% 50%', scrub:1 }})
     .fromTo('.sky', {y:-150}, {y:-30}, 0)
