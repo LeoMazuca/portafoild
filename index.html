@@ -99,7 +99,9 @@
         </svg>
 
         <!-- Contenido principal -->
-        <div class="triangulo"></div>
+        <div class="triangulo">
+            
+        </div>
         
         <section class="logo">
             <img src="img/logopngfinal.png" alt="">
@@ -108,88 +110,159 @@
 
         <nav role="navigation">
             <div class="menuToggle">
-                <input type="checkbox">
+                <input type="checkbox" id="checkbox">
                 <span></span>
                 <span></span>
                 <span class="last"></span>
-                <ul class="menu">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Projects</a></li>
-                    <li><a href="#">Contact Me</a></li>
+                <ul class="menu" id="menu">
+                    <li><a href="#main" id="menu-home">Home</a></li>
+                    <li><a href="#about" id="menu-about">About</a></li>
+                    <li><a href="#projects" id="menu-projects">Projects</a></li>
+                    <li><a href="#footer" id="menu-contact">Contact Me</a></li>
                 </ul>
             </div>
         </nav>
 
         
         <div class="content">
-            <div class="about">
+            <div class="about" id="about">
                 <div class="foto">
                     <img src="img/Leonardo Mazuca Perez 12075621 LSCA.jpg" alt="">
                 </div>
                 <div class="texto">
                     <h2>
-                        <span>ABOUT</span>
+                        <span>ABOUT ME</span>
                     </h2>
                     <p>
                     Hello, my name is Leo and I'm a web developer, I am a graduate of the Universidad Autónoma de Coahuila (Dec. 2020). <br>
                     I'm 23 years, I am from México and I am excited to work with you. These are some of the technologies that I can use 
                     and some of the projects I've been on.
                     </p>
+                    
                 </div>
             </div>
             <div class="technologies">
                 <div>
-                    <img src="img/html5.png" alt="">
-                    <h3>HTML 5</h3>
+                    <a href="https://developer.mozilla.org/es/docs/Web/HTML" target="_blank"><img src="img/html5.png" alt=""></a>
+                    <h3 class="tech">HTML 5</h3>
                 </div>
                 <div>
-                    <img src="img/css-3.png" alt="">
-                    <h3>CSS 3</h3>
+                    <a href="https://developer.mozilla.org/es/docs/Web/CSS" target="_blank"><img src="img/css-3.png" alt=""></a>
+                    <h3 class="tech">CSS 3</h3>
                 </div>
                 <div>
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/245px-Unofficial_JavaScript_logo_2.svg.png" alt="">
-                    <h3>JavaScript</h3>
+                    <a href="https://developer.mozilla.org/es/docs/Web/JavaScript" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/245px-Unofficial_JavaScript_logo_2.svg.png" alt=""></a>
+                    <h3 class="tech">JavaScript</h3>
                 </div>
                 <div>
-                    <img src="https://seocom.agency/wp-content/uploads/2019/02/bootstrap-stack.png" alt="">
-                    <h3>Bootstrap</h3>
+                    <a href="https://getbootstrap.com/" target="_blank"><img src="https://seocom.agency/wp-content/uploads/2019/02/bootstrap-stack.png" alt=""></a>
+                    <h3 class="tech">Bootstrap</h3>
                 </div>
             </div>
-            
-        </div>
-        <div class="projects">
-                <div class="project-container">
-                    <div>
-                        <img src="img/sky.jfif" alt="">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis expedita voluptates architecto provident ab saepe ea, reprehenderit, nesciunt maxime recusandae tenetur odit illum, quis molestias veritatis nulla corrupti. Blanditiis, veniam!</p>
-                    </div>
-                    <div>
-                        <img src="img/sky.jfif" alt="">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis expedita voluptates architecto provident ab saepe ea, reprehenderit, nesciunt maxime recusandae tenetur odit illum, quis molestias veritatis nulla corrupti. Blanditiis, veniam!</p>
-                    </div>
-                    <div>
-                        <img src="img/sky.jfif" alt="">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis expedita voluptates architecto provident ab saepe ea, reprehenderit, nesciunt maxime recusandae tenetur odit illum, quis molestias veritatis nulla corrupti. Blanditiis, veniam!</p>
-                    </div>
-                    <div>
-                        <img src="img/sky.jfif" alt="">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis expedita voluptates architecto provident ab saepe ea, reprehenderit, nesciunt maxime recusandae tenetur odit illum, quis molestias veritatis nulla corrupti. Blanditiis, veniam!</p>
-                    </div>
-                    <div>
-                        <img src="img/sky.jfif" alt="">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis expedita voluptates architecto provident ab saepe ea, reprehenderit, nesciunt maxime recusandae tenetur odit illum, quis molestias veritatis nulla corrupti. Blanditiis, veniam!</p>
-                    </div><div>
-                        <img src="img/sky.jfif" alt="">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis expedita voluptates architecto provident ab saepe ea, reprehenderit, nesciunt maxime recusandae tenetur odit illum, quis molestias veritatis nulla corrupti. Blanditiis, veniam!</p>
-                    </div>
+
+            <!-- Projects -->
+            <h2 class="subtitulo" id="projects">
+                <span>PROJECTS</span>
+            </h2>
+
+            <div class="project-container">
+                <div class="project">
+                    <img src="img/sky.jfif" alt="">
+                        <h2>
+                            <span>Weather App</span>
+                        </h2>
+                        <p>Esta pagina web esta realizada con una API que me ayuda a recopilar los datos meteorologicos
+                            de cualquier ciudad en el mundo. Támbien es adaptable a dispositivos mobiles.
+                        </p>
+                        <div class="icons">
+                            <i class="fab fa-html5"></i>
+                            <i class="fab fa-css3-alt"></i>
+                            <i class="fab fa-js"></i>
+                        </div>
                 </div>
+                <div class="project">
+                    <img src="img/sky.jfif" alt="">
+                        <h2>
+                            <span>Zapateria</span>
+                        </h2>
+                        <p>Esta pagina web esta realizada con una API que me ayuda a recopilar los datos meteorologicos
+                            de cualquier ciudad en el mundo. Támbien es adaptable a dispositivos mobiles.
+                        </p>
+                        <div class="icons">
+                            <i class="fab fa-html5"></i>
+                            <i class="fab fa-css3-alt"></i>
+                            <i class="fab fa-js"></i>
+                        </div>
+                </div>
+                <div class="project">
+                    <img src="img/sky.jfif" alt="">
+                        <h2>
+                            <span>Digital Product</span>
+                        </h2>
+                        <p>Esta pagina web esta realizada con una API que me ayuda a recopilar los datos meteorologicos
+                            de cualquier ciudad en el mundo. Támbien es adaptable a dispositivos mobiles.
+                        </p>
+                        <div class="icons">
+                            <i class="fab fa-html5"></i>
+                            <i class="fab fa-css3-alt"></i>
+                            <i class="fab fa-js"></i>
+                        </div>
+                </div>
+                <div class="project">
+                    <img src="img/sky.jfif" alt="">
+                        <h2>
+                            <span>Scroll Trigger</span>
+                        </h2>
+                        <p>Esta pagina web esta realizada con una API que me ayuda a recopilar los datos meteorologicos
+                            de cualquier ciudad en el mundo. Támbien es adaptable a dispositivos mobiles.
+                        </p>
+                        <div class="icons">
+                            <i class="fab fa-html5"></i>
+                            <i class="fab fa-css3-alt"></i>
+                            <i class="fab fa-js"></i>
+                        </div>
+                </div>
+                <div class="project">
+                    <img src="img/sky.jfif" alt="">
+                        <h2>
+                            <span>Hoteles App</span>
+                        </h2>
+                        <p>Esta pagina web esta realizada con una API que me ayuda a recopilar los datos meteorologicos
+                            de cualquier ciudad en el mundo. Támbien es adaptable a dispositivos mobiles.
+                        </p>
+                        <div class="icons">
+                            <i class="fab fa-html5"></i>
+                            <i class="fab fa-css3-alt"></i>
+                            <i class="fab fa-js"></i>
+                        </div>
+                </div>
+                <div class="project">
+                    <img src="img/sky.jfif" alt="">
+                        <h2>
+                            <span>Stock Financieros</span>
+                        </h2>
+                        <p>Esta pagina web esta realizada con una API que me ayuda a recopilar los datos meteorologicos
+                            de cualquier ciudad en el mundo. Támbien es adaptable a dispositivos mobiles.
+                        </p>
+                        <div class="icons">
+                            <i class="fab fa-html5"></i>
+                            <i class="fab fa-css3-alt"></i>
+                            <i class="fab fa-js"></i>
+                        </div>
+                </div>
+            </div>
         </div>
-        <footer class="footer">
-            <a href="#"><i class="fab fa-github"></i></a>
-            <a href="#"><i class="fab fa-linkedin"></i></a>
-            <a href="#"><i class="fab fa-instagram"></i></a>
-            <a href="#"><i class="fab fa-twitter"></i></a>
+  
+        <footer class="footer" id="footer">
+            <div class="copyright">
+                <p>Copyright © 2021 All Rights Reserved <br> by Mazuca´s Projects.</p>
+            </div>
+            <div class="icons-footer">
+                <a href="https://github.com/LeoMazuca"><i class="fab fa-github"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="mailto:leo_mazuca@hotmail.com"><i class="fas fa-envelope-open-text"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
         </footer>
     </div>
     
@@ -204,4 +277,5 @@
 <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/ScrollToPlugin3.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/zepto/1.2.0/zepto.min.js"></script>
 <script src="javaScript/main.js"></script>
+<script src="javaScript/menu.js"></script>
 </html>

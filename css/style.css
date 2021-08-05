@@ -51,6 +51,16 @@ div{
      z-index: 1;
      position: absolute;
 }
+.triangulo-2{
+    width: 0;
+     height: 0;
+     border-right: 50vw solid transparent;
+     border-top: 100px solid var(--main-color);
+     border-left: 50vw solid transparent;
+     border-bottom: 100px solid transparent;
+     z-index: 1;
+     position: absolute;
+}
 @keyframes animar{
     0%{
         stroke-dashoffset: 425px;

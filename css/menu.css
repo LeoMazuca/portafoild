@@ -9,7 +9,7 @@
     top: 0px;
     right: 0;
     margin: 1.5em 1.5em;
-    z-index: 3;
+    z-index: 4;
     padding: .5em;
     -webkit-user-select: none;
     user-select: none;
@@ -70,7 +70,7 @@
 }
 .menu{
     position: absolute;
-    /* width: 30vw; */
+    width: max-content;
     height: 100vh;
     top: -1.5em;
     left: calc(100% + 1.5em);
@@ -79,7 +79,6 @@
     background: var(--secondary-color);
     list-style: none;
     transform-origin: 0% 0%;
-    /* transform: translate(-100px, 0); */
     transition: all .5s;
     display: flex;
     flex-direction: column;
@@ -96,12 +95,16 @@
 .menu li:hover{
     background-color: var(--main-color);
     cursor: pointer;
-}
+} 
 li:hover a{
     color: var(--secondary-color);
 }
 .menuToggle input:checked ~ ul{
-    transform: translatex(-100%)
+    /* transform: none; */
+    transform: translate(-100%, 0);
+}
+.cerrarMenu{
+    transform: translate(0%, 0);
 }
 /* ******************************************LOGO */
 .logo{
