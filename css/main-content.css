@@ -2,12 +2,16 @@
     --main-color: #185ADB;
     --secondary-color: #0A1931;
     --tertiary-color: #E8F6EF;
+    --html-color: #ff5722;
+    --css-color: #2196f3;
+    --js-color: #f7df1e;
+    --boot-color: #563d7c;
 }
 .content{
-    padding: 20% 10%;
+    padding: 20% 0%;
     position: relative;
     opacity: 1;
-    padding-bottom: 6em;
+    padding-bottom: 0;
     width: 100%;
     font-size: 16px;
     background: var(--main-color);
@@ -19,7 +23,8 @@
     position: relative;
 }
 .about{
-    width: 100%;
+    width: 80%;
+    margin: auto;
     /* height: 50vh; */
     display: grid;
     /* grid-auto-rows: auto; */
@@ -28,7 +33,6 @@
     grid-gap: 10px;/*El espacio entre divs*/
     grid-auto-flow: dense;/* Esto es para que rellene si quedan espacios vacios */
     align-items: center;
-    
 }
 .foto img{
     width: 80%;
@@ -69,8 +73,9 @@
 }
 /* *****************************************************TECHNOLOGIES */
 .technologies{
+    width: 60%;
+    margin: auto;
     margin-top: 10%;
-    width: 100%;
     padding: 1em;
     /* position: relative; */
     background-color: var(--secondary-color);
@@ -109,6 +114,8 @@
 }
 /* ***************************************************PROYECTOS */
 .subtitulo{
+    width: 80%;
+    margin: auto;
     margin-top: 10%;
     letter-spacing: .4em;
     font-size: 2em;
@@ -131,8 +138,6 @@
     top: -49px;
     z-index: 1;
 }
-
-
 .projects{
     width: 100%;
     height: 50vhs;
@@ -140,24 +145,29 @@
     padding: 2rem;
 }
 .project-container{
+    /* width: 80%;
+    border-radius: 30px; */
     width: 100%;
-    border-radius: 30px;
+    border-radius: 0;
     margin: auto;
-    padding: 1em;
+    padding: 5%;
+    padding-top: 15%;
     background: var(--secondary-color);
     display: grid;
     grid-gap: 20px;
-    grid-template-columns: repeat(auto-fit, minmax(min(100%, 25rem), 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 35em), 1fr));
+    align-items: center;
 }
 .project{
-    border-radius: 30px;
-    
+    margin-bottom: 10%;
+    /* border-radius: 30px; */
     /* padding: 1em; */
+    transition: all 1.5s;
 }
 .project-container h2{
     letter-spacing: .4em;
     font-size: 1.5em;
-    margin-top: 1em;
+    margin-top: .5em;
     color: var(--main-color);
     z-index: 2;
 }
@@ -184,26 +194,125 @@
     text-align: justify;
 }
 .icons{
-    width: 50%;
+    width: 100%;
     display: grid;
     /* grid-gap: 10px; */
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: auto 1fr;
+    padding: 5px 5%;
     font-size: 3em;
-    color: var(--main-color);
+    background: var(--main-color);
 }
 .fa-html5{
     color: #ff5722;
+    -webkit-filter: drop-shadow(2px 2px 0 var(--secondary-color));
+    filter: drop-shadow(2px 2px 0 var(--secondary-color));
 }
 .fa-css3-alt{
     color: #2196f3;
+    -webkit-filter: drop-shadow(2px 2px 0 var(--secondary-color));
+    filter: drop-shadow(2px 2px 0 var(--secondary-color));
 }
 .fa-js{
     color: #f7df1e;
+    -webkit-filter: drop-shadow(2px 2px 0 var(--secondary-color));
+    filter: drop-shadow(2px 2px 0 var(--secondary-color));
 }
+.fa-bootstrap{
+    color: #563d7c;
+    -webkit-filter: drop-shadow(2px 2px 0 var(--secondary-color));
+    filter: drop-shadow(2px 2px 0 var(--secondary-color));
+}
+.progress-bar{
+    width: 90%;
+    height: 15px;
+    background: var(--secondary-color);
+    margin-left: 30px;
+    border-radius: 15px;
+    margin: auto 10%;
+    border: 2px solid var(--secondary-color);
+}
+.progress{
+    height: 11px;
+    border-radius: 15px;
+    border: none;
+}
+.progress span{
+    color: var(--secondary-color);
+    font-size: 11px;
+    display: block;
+    position: relative;
+    letter-spacing: 2px;
+    font-weight: bolder;
+    top: -1px;
+}
+/* .progress::after{
+    content: '';
+    display: block;
+    position: relative;
+    width: 25px;
+    height: 25px;
+    background: red;
+    border-radius: 50%;
+    float: right;
+    top: 50%;
+    transform: translate(50%, -75%);
+    border: 2px solid var(--tertiary-color);
+} */
+.weather-app-p-html{
+    background: var(--html-color);
+    width: 8.2%;
+    min-width: 20%;
+}
+.weather-app-p-css{
+    background: var(--css-color);
+    width: 56.6%;
+    min-width: 20%;
+}
+.weather-app-p-js{
+    background: var(--js-color);
+    width: 35.2%;
+    min-width: 20%;
+}
+.weather-app-p-bootstrap{
+    background: var(--js-color);
+    width: 35.2%;
+    min-width: 20%;
+}
+.zapateria-app-p-html{
+    background: var(--html-color);
+    width: 90.4%;
+    min-width: 20%;
+}
+.zapateria-app-p-css{
+    background: var(--css-color);
+    width: 4.2%;
+    min-width: 20%;
+}
+.zapateria-app-p-js{
+    background: var(--js-color);
+    width: 3.4%;
+    min-width: 20%;
+}
+.zapateria-app-p-boot{
+    background: var(--boot-color);
+    width: 2.0%;
+    min-width: 20%;
+}
+.Digital-app-p-html{
+    background: var(--html-color);
+    width: 61.0%;
+    min-width: 20%;
+}
+.Digital-app-p-css{
+    background: var(--css-color);
+    width: 39.0%;
+    min-width: 20%;
+}
+
 .project-container img{
     width: 100%;
-    border-top-left-radius: 30px;
-    border-top-right-radius: 30px;
+    /* border-top-left-radius: 30px;
+    border-top-right-radius: 30px; */
 }
 .icons img{
     width: 50%;
@@ -219,8 +328,11 @@
         width: 50%;
     }
     .triangulo{
-         border-top: 50px solid #fff;
+         border-top: 50px solid var(--tertiary-color);
     }
+    .triangulo-2{
+        border-top: 50px solid var(--main-color);
+   }
     .icons{
         width: 100%;
     }
@@ -244,6 +356,19 @@
     .menu{
         height: calc(100vh + 1.5em);
         width: 50vw;
+    }
+    .technologies{
+        width: 80%;
+    }
+    .project-container{
+        width: 100%;
+        border-radius: 0px;
+        padding: 5%;
+        padding-top: 20%;
+        margin-bottom: 0;
+    }
+    .content{
+        padding-bottom: 0px;
     }
 }
 @media (max-width: 480px){
