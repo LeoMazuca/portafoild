@@ -75,8 +75,8 @@
 .technologies{
     width: 60%;
     margin: auto;
-    margin-top: 10%;
     padding: 1em;
+    margin-top: 10%;
     /* position: relative; */
     background-color: var(--secondary-color);
     border-radius: 30px;
@@ -378,12 +378,37 @@
     }
     .about{
         grid-template-columns: 1fr;
+        width: 90%;
+    }
+    .texto{
+        top: -30%;
+    }
+    .texto h2{
+        font-size: 1.5em;
+        width: 100%;
+        padding-bottom: 5%;
+    }
+    .texto h2::after{
+        top: -35px;
+    }
+    .texto p{
+        font-size: .8em;
+        width: 80%;
+        margin: auto;
+        text-align: justify;
+    }
+    .subtitulo{
+        font-size: 1.5em;
+        width: 100%;
+    }
+    .subtitulo::after{
+        top: -35px;
     }
     .about img{
         width: 50%;
     }
     .triangulo{
-         border-top: 50px solid var(--tertiary-color);
+         border-top: 50px solid white;
     }
     .triangulo-2{
         border-top: 50px solid var(--main-color);
@@ -414,6 +439,11 @@
     }
     .technologies{
         width: 80%;
+        grid-gap: 0;
+        grid-template-columns: repeat(auto-fit, minmax(min(100%, 4rem), 1fr));
+    }
+    .tech{
+        font-size: .8em;
     }
     .project-container{
         width: 100%;
