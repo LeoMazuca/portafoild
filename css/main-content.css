@@ -68,8 +68,11 @@
     z-index: 1;
 }
 .texto p{
+    width: 85%;
+    margin: auto;
     font-size: 1.2rem;
     color: var(--secondary-color);
+    text-align: justify;
 }
 /* *****************************************************TECHNOLOGIES */
 .technologies{
@@ -79,7 +82,7 @@
     margin-top: 5%;
     /* position: relative; */
     background-color: var(--secondary-color);
-    border-radius: 30px;
+    border-radius: 10px;
     display: grid;
     grid-gap: 1em;
     grid-template-columns: repeat(auto-fit, minmax(min(100%, 6rem), 1fr));
@@ -414,7 +417,11 @@
         border-top: 50px solid var(--main-color);
    }
     .icons{
-        width: 100%;
+        width: 80%;
+        margin: auto;
+    }
+    .icons i{
+        font-size: .6em;
     }
     .menuToggle{
         margin: 1em 0;
