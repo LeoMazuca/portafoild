@@ -19,7 +19,7 @@
 }
 /* *************************************ABOUT  */
 .about div{
-    display: block;
+    display: inline-block;
     position: relative;
 }
 .about{
@@ -54,7 +54,7 @@
 .texto span{
     background: var(--secondary-color);
     z-index: 3;
-    padding: 0 15px;
+    padding: 0 0 0 15px;
     position: relative;
 }
 .texto h2::after{
@@ -76,7 +76,7 @@
     width: 60%;
     margin: auto;
     padding: 1em;
-    margin-top: 10%;
+    margin-top: 5%;
     /* position: relative; */
     background-color: var(--secondary-color);
     border-radius: 30px;
@@ -125,7 +125,7 @@
 .subtitulo span{
     background: var(--secondary-color);
     z-index: 3;
-    padding: 0 15px;
+    padding: 0 0 0 15px;
     position: relative;
 }
 .subtitulo::after{
@@ -439,6 +439,7 @@
     }
     .technologies{
         width: 80%;
+        margin-top: 0;
         grid-gap: 0;
         grid-template-columns: repeat(auto-fit, minmax(min(100%, 4rem), 1fr));
     }

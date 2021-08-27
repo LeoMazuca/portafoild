@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="css/menu.css">
     <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/main-content.css">
+    <link rel="stylesheet" href="css/text-animation.css">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenLite.min.js"></script>
 </head>
@@ -25,12 +26,13 @@
                 </g>
             </mask>
 
-            <image class="sky" xlink:href="img/sky.jfif"  width="890" height="500" y="0" x="0" style="transform: scale(1.4);"/>
+            <image class="sky" xlink:href="https://images.unsplash.com/photo-1592471396685-06e0da02d03c?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80"  width="750" height="500" y="0" x="0" style="transform: scale(1.6);"/>
+            <!-- <image class="sky" xlink:href="https://images.unsplash.com/photo-1592471396685-06e0da02d03c?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80"  width="890" height="500" y="0" x="0" style="transform: scale(1.4);"/> -->
             <image class="bigMountain" xlink:href="img/bigMountain.png"  width="820" height="512" y="0" x="200"/>
             <image class="cloud3" xlink:href="img/cloud3.png"  width="820" height="512" y="270" x="600" style="transform: scale(.8);"/>
             <image class="mediumMountain" xlink:href="https://images.pexels.com/photos/8924668/pexels-photo-8924668.png?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"  width="820" height="512" y="150" x="-100"/>
             <image class="smallMountain" xlink:href="img/smallMountain.png"  width="820" height="512" y="50" x="550" style="transform: scale(1.2);"/>
-            <image class="cloud" id="cloud" xlink:href="img/cloud.png"  width="820" height="512" y="130" x="-135"/>
+            <image class="cloud" id="cloud" xlink:href="img/clouds.png"  width="820" height="512" y="200" x="-235"/>
             
             
 
@@ -54,7 +56,7 @@
             
 
             <svg y="60">
-                <polyline class="arrow" fill="#185ADB" points="599,250 599,289 590,279 590,282 600,292 610,282 610,279 601,289 601,250"/>
+                <polyline class="arrow sombra" fill="#185ADB" points="599,250 599,289 590,279 590,282 600,292 610,282 610,279 601,289 601,250"/>
             </svg>
 
             <g mask="url(#m)">
@@ -120,14 +122,14 @@
                 </div>
                 <div class="texto">
                     <h2>
-                        <span>ABOUT ME</span>
+                        <span id="text"></span>
+                        <div class="guion-bajo" id="console">&#95</div>
                     </h2>
                     <p>
                     Hello, my name is Leo and I'm a web developer, I am a graduate of the Universidad Autónoma de Coahuila (Dec. 2020). <br>
                     I'm 23 years, I am from México and I am excited to work with you. These are some of the technologies that I can use 
                     and some of the projects I've been on.
                     </p>
-                    
                 </div>
             </div>
 
@@ -151,9 +153,12 @@
             </div>
 
             <!-- ****************************************************PROJECTS -->
-            <h2 class="subtitulo" id="projects">
-                <span>PROJECTS</span>
-            </h2>
+            <div class="texto">
+                <h2 class="subtitulo" id="projects">
+                    <span id="projectWord"></span>
+                    <div class="guion-bajo" id="consoleDos">&#95</div>
+                </h2>
+            </div>
 
             <div class="triangulo-2"></div>
 
@@ -381,4 +386,5 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/zepto/1.2.0/zepto.min.js"></script>
 <script src="javaScript/main.js"></script>
 <script src="javaScript/menu.js"></script>
+<script src="javaScript/text-animation.js"></script>
 </html>
