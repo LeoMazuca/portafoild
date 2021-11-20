@@ -38,7 +38,7 @@
     width: 80%;
     border-radius: 100%;
     border: 3px solid var(--secondary-color);
-    
+    box-shadow: 3px 3px 5px #333;
 }
 .texto{
     justify-content: center;
@@ -56,6 +56,7 @@
     z-index: 3;
     padding: 0 0 0 15px;
     position: relative;
+    box-shadow: 3px 3px 5px #333;
 }
 .texto h2::after{
     content: "";
@@ -86,6 +87,7 @@
     display: grid;
     grid-gap: 1em;
     grid-template-columns: repeat(auto-fit, minmax(min(100%, 6rem), 1fr));
+    box-shadow: 3px 3px 5px #333;
 }
 .technologies div{
     /* background: var(--main-color); */
@@ -181,9 +183,15 @@
 .imagen{
     grid-area: imagen;
 }
+.imagen img{
+    box-shadow: 3px 3px 5px black;
+}
 .titulo{
     grid-area: titulo;
     padding: 0 5%;
+}
+.titulo span{
+    box-shadow: 3px 3px 5px black;
 }
 .info{
     grid-area: info;
@@ -226,6 +234,7 @@
     padding: 5px 5%;
     font-size: 3em;
     background: var(--main-color);
+    box-shadow: 3px 3px 5px black;
 }
 .fa-html5{
     color: #ff5722;
