@@ -1,3 +1,53 @@
 {
-    "liveServer.settings.port": 5502
+    "liveServer.settings.port": 5502,
+    "better-comments.tags": [
+
+
+        {
+            "tag": "!",
+            "color": "#FF2D00",
+            "strikethrough": false,
+            "underline": false,
+            "backgroundColor": "transparent",
+            "bold": false,
+            "italic": false
+        },
+        {
+            "tag": "?",
+            "color": "#3498DB",
+            "strikethrough": false,
+            "underline": false,
+            "backgroundColor": "transparent",
+            "bold": false,
+            "italic": false
+        },
+        {
+            "tag": "//",
+            "color": "#474747",
+            "strikethrough": true,
+            "underline": false,
+            "backgroundColor": "transparent",
+            "bold": false,
+            "italic": false
+        },
+        {
+            "tag": "todo",
+            "color": "#000",
+            "strikethrough": false,
+            "underline": false,
+            "backgroundColor": "red",
+            "bold": true,
+            "italic": false
+        },
+        {
+            "tag": "*",
+            "color": "#000",
+            "strikethrough": false,
+            "underline": false,
+            "backgroundColor": "red",
+            "bold": true,
+            "italic": false,
+            "touppercase": true
+        }
+    ]
 }

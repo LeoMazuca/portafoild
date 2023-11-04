@@ -1,287 +1,306 @@
-:root{
-    --main-color: #185ADB;
-    --secondary-color: #0A1931;
-    --tertiary-color: #E8F6EF;
-    --html-color: #ff5722;
-    --css-color: #2196f3;
-    --js-color: #f7df1e;
-    --boot-color: #563d7c;
+:root {
+  --main-color: #185adb;
+  --secondary-color: #0a1931;
+  --tertiary-color: #e8f6ef;
+  --html-color: #ff5722;
+  --css-color: #2196f3;
+  --js-color: #f7df1e;
+  --boot-color: #563d7c;
+  --boot-color: #aa0f0f;
 }
-.content{
-    padding: 20% 0%;
-    position: relative;
-    opacity: 1;
-    padding-bottom: 0;
-    width: 100%;
-    font-size: 16px;
-    background: var(--main-color);
-    display: block;
+
+/** SE REFIERE A LA PARTE EN DONDE ESTA EL ABOUT ME CON LA FOTO Y LOS ICONOS DE HTML, CSS, ETC. */
+.content {
+  padding: 20% 0%;
+  position: relative;
+  opacity: 1;
+  padding-bottom: 0;
+  width: 100%;
+  font-size: 1rem;
+  background: var(--main-color);
+  display: block;
 }
-/* *************************************ABOUT  */
-.about div{
-    display: inline-block;
-    position: relative;
+
+/** SOLO ES LA PARTE EN DONDE VA EL ABOUT ME (LA IMAGEN Y EL TEXTO)  */
+.about {
+  display: inline-block;
+  position: relative;
 }
-.about{
-    width: 80%;
-    margin: auto;
-    /* height: 50vh; */
-    display: grid;
-    /* grid-auto-rows: auto; */
-    grid-template-columns: repeat(auto-fit, minmax(min(100%, 10em), 1fr));
-    /* grid-template-columns: 1fr 1fr; */
-    grid-gap: 10px;/*El espacio entre divs*/
-    grid-auto-flow: dense;/* Esto es para que rellene si quedan espacios vacios */
-    align-items: center;
+
+.about {
+  width: 60%;
+  margin: auto;
+  /* height: 50vh; */
+  display: grid;
+  /* grid-auto-rows: auto; */
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 10em), 1fr));
+  /* grid-template-columns: 1fr 1fr; */
+  grid-gap: 10px;
+  /*El espacio entre divs*/
+  grid-auto-flow: dense;
+  /* Esto es para que rellene si quedan espacios vacios */
+  align-items: center;
 }
-.foto img{
-    width: 80%;
-    border-radius: 100%;
-    border: 3px solid var(--secondary-color);
-    box-shadow: 3px 3px 5px #333;
+
+.foto img {
+  width: 70%;
+  border-radius: 100%;
+  border: 3px solid var(--secondary-color);
+  box-shadow: 3px 3px 5px #333;
 }
-.texto{
-    justify-content: center;
-    align-items: center;
-    grid-column: span 2;
+
+.texto {
+  justify-content: center;
+  align-items: center;
+  grid-column: span 3;
 }
-.texto h2{
-    letter-spacing: .4em;
-    font-size: 2em;
-    color: var(--main-color);
-    z-index: 2;
+
+.about h2 {
+  letter-spacing: 0.4em;
+  font-size: 2em;
+  color: var(--main-color);
+  z-index: 2;
 }
-.texto span{
-    background: var(--secondary-color);
-    z-index: 3;
-    padding: 0 0 0 15px;
-    position: relative;
-    box-shadow: 3px 3px 5px #333;
+
+.about span {
+  background: var(--secondary-color);
+  z-index: 3;
+  padding: 0 0 0 15px;
+  position: relative;
+  box-shadow: 3px 3px 5px #333;
 }
-.texto h2::after{
-    content: "";
-    display: inline-block;
-    height: 3px;
-    width: 100%;
-    background: var(--secondary-color);
-    position: relative;
-    top: -49px;
-    z-index: 1;
+
+.about h2::after {
+  content: "";
+  display: inline-block;
+  height: 3px;
+  width: 100%;
+  background: var(--secondary-color);
+  position: relative;
+  top: -49px;
+  z-index: 1;
 }
-.texto p{
-    width: 85%;
-    margin: auto;
-    font-size: 1.2rem;
-    color: var(--secondary-color);
-    text-align: justify;
+
+.texto p {
+  width: 85%;
+  margin: auto;
+  font-size: 1.2rem;
+  color: var(--secondary-color);
+  text-align: justify;
 }
-/* *****************************************************TECHNOLOGIES */
-.technologies{
-    width: 60%;
-    margin: auto;
-    padding: 1em;
-    margin-top: 5%;
-    /* position: relative; */
-    background-color: var(--secondary-color);
-    border-radius: 10px;
-    display: grid;
-    grid-gap: 1em;
-    grid-template-columns: repeat(auto-fit, minmax(min(100%, 6rem), 1fr));
-    box-shadow: 3px 3px 5px #333;
+
+/* *                                                                                              TECHNOLOGIES */
+.technologies {
+  width: 60%;
+  margin: auto;
+  padding: 1em;
+  margin-top: 5%;
+  position: relative;
+  background-color: var(--secondary-color);
+  border-radius: 10px;
+  display: grid;
+  grid-gap: 1em;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 6rem), 1fr));
+  box-shadow: 3px 3px 5px #333;
 }
-.technologies div{
-    /* background: var(--main-color); */
-    color: var(--main-color);
-    padding: 5%;
-    display: grid;
-    grid-template-rows: 3fr 1fr;
-    justify-content: center;
-    justify-content: center;
-    align-items: center;
-    justify-items: center;
+
+.technologies div {
+  /* background: var(--main-color); */
+  color: var(--main-color);
+  padding: 5%;
+  display: grid;
+  grid-template-rows: 3fr 1fr;
+  justify-content: center;
+  justify-content: center;
+  align-items: center;
+  justify-items: center;
 }
-.technologies img{
-    width: 50%;
+
+.technologies img {
+  width: 50%;
 }
+
 .technologies a {
-    text-decoration: none;
-    color: var(--main-color);
+  text-decoration: none;
+  color: var(--main-color);
 }
-.tech{
-    padding: 0 5%;
-    margin-top: 10%;
-    width: 100%;
-    transition: all .5s;
+
+.tech {
+  padding: 0 5%;
+  margin-top: 10%;
+  width: 100%;
+  transition: all 0.5s;
 }
-.technologies div:hover .tech{
-    background: var(--main-color);
-    color: var(--secondary-color);
+
+.technologies div:hover .tech {
+  background: var(--main-color);
+  color: var(--secondary-color);
 }
-/* ***************************************************PROYECTOS */
-.subtitulo{
-    width: 80%;
-    margin: auto;
-    margin-top: 10%;
-    letter-spacing: .4em;
-    font-size: 2em;
-    color: var(--main-color);
-    z-index: 2;
+
+/* *                                                                                        PROYECTOS */
+/*! vamos a intentar agregar estilos para el modo escriotorio usando el segundo diseño */
+.footer {
+  display: nones;
 }
-.subtitulo span{
-    background: var(--secondary-color);
-    z-index: 3;
-    padding: 0 0 0 15px;
-    position: relative;
+.project-container {
+  display: flex;
+  flex-direction: column-reverse;
+  overflow: hidden;
 }
-.subtitulo::after{
-    content: "";
-    display: inline-block;
-    height: 3px;
-    width: 90%;
-    background: var(--secondary-color);
-    position: relative;
-    top: -49px;
-    z-index: 1;
+.project {
+  width: 60%;
+  margin: auto;
+  height: 85vh;
+  display: grid;
+  align-items: center;
+  grid-auto-flow: column;
 }
-.project-container{
-    /* width: 80%;
-    border-radius: 30px; */
-    width: 100%;
-    border-radius: 0;
-    margin: auto;
-    padding: 5%;
-    padding-top: 15%;
-    background: var(--secondary-color);
-    /* display: grid;
-    grid-gap: 20px; */
-    /* grid-template-columns: repeat(auto-fit, minmax(min(100%, 35em), 1fr)); */
-    
+
+/*! Esto es la parte del nombre del proyecto */
+.project_tittle {
+  display: grid;
+  grid-auto-flow: column;
+  writing-mode: vertical-rl;
+  text-orientation: sideways;
+  margin: 0 20% 0 0;
 }
-.project{
-    margin-bottom: 10%;
-    /* border-radius: 30px; */
-    /* padding: 1em; */
-    transition: all 1.5s;
-    /* display: flex;
-    flex-direction: column;
-     */
-    display: grid;    
-    grid-template-columns: 1fr 1fr;
-    grid-template-areas:    "imagen     titulo"
-                            "imagen     info";
-    align-items: center;
+.project_name {
+  display: grid;
+  grid-auto-flow: column;
+  align-items: center;
 }
-.project-2{
-    margin-bottom: 10%;
-    transition: all 1.5s;
-    display: grid;    
-    grid-template-columns: 1fr 1fr;
-    grid-template-areas:    "titulo     imagen"
-                            "info       imagen";
-    align-items: center;
+
+.project_name h3::after {
+  content: "";
+  display: inline-block;
+  height: 100px;
+  width: 3px;
+  background: var(--secondary-color);
+  position: relative;
+  top: 0px;
+  z-index: 1;
 }
-.imagen{
-    grid-area: imagen;
+
+.project_name > h3 > span {
+  color: var(--secondary-color);
+  font-size: 2.5rem;
+  padding: 0;
 }
-.imagen img{
-    box-shadow: 3px 3px 5px black;
+
+.project_number {
+  color: var(--secondary-color-color);
+  font-size: 5rem;
+  transform: rotate(-90deg);
+  margin-right: 1rem;
 }
-.titulo{
-    grid-area: titulo;
-    padding: 0 5%;
+.info_number {
+  display: none;
 }
-.titulo span{
-    box-shadow: 3px 3px 5px black;
+/*! Esta es la parte de la imagen del proyecto */
+.project_img {
+  width: 50%;
+  grid-column-start: 3;
 }
-.info{
-    grid-area: info;
-    padding: 0 5%;
+
+.project_img img {
+  width: 50%;
 }
-.project-container h2{
-    letter-spacing: .4em;
-    font-size: 1.5em;
-    margin-top: .5em;
-    color: var(--main-color);
-    z-index: 2;
+
+/*! La clase .subtitulo se refiere a los textos que se estan escribiendo y borrando */
+
+.subtitulo {
+  width: 80%;
+  margin: auto;
+  margin-top: 10%;
+  letter-spacing: 0.4em;
+  font-size: 2em;
+  color: var(--main-color);
+  z-index: 2;
 }
-.project-container h2 span{
-    background: var(--main-color);
-    color: var(--secondary-color);
-    z-index: 3;
-    padding: 0 15px;
-    position: relative;
+
+.subtitulo span {
+  background: var(--secondary-color);
+  z-index: 3;
+  padding: 0 0 0 15px;
+  position: relative;
 }
-.project-container h2::after{
-    content: "";
-    display: inline-block;
-    height: 3px;
-    width: 100%;
-    background: var(--main-color);
-    position: relative;
-    top: -35px;
-    z-index: 1;
+
+.subtitulo::after {
+  content: "";
+  display: inline-block;
+  height: 3px;
+  width: 90%;
+  background: var(--secondary-color);
+  position: relative;
+  top: -49px;
+  z-index: 1;
 }
-.project-container p{
-    padding: 0  1.5em 1.5em;
-    color: var(--main-color);
-    text-align: justify;
+
+.icons {
+  width: 100%;
+  display: grid;
+  /* grid-gap: 10px; */
+  grid-template-columns: auto 1fr;
+  padding: 5px 5%;
+  font-size: 3em;
+  background: var(--main-color);
+  box-shadow: 3px 3px 5px black;
 }
-.icons{
-    width: 100%;
-    display: grid;
-    /* grid-gap: 10px; */
-    grid-template-columns: auto 1fr;
-    padding: 5px 5%;
-    font-size: 3em;
-    background: var(--main-color);
-    box-shadow: 3px 3px 5px black;
+
+.fa-html5 {
+  color: #ff5722;
+  -webkit-filter: drop-shadow(2px 2px 0 var(--secondary-color));
+  filter: drop-shadow(2px 2px 0 var(--secondary-color));
 }
-.fa-html5{
-    color: #ff5722;
-    -webkit-filter: drop-shadow(2px 2px 0 var(--secondary-color));
-    filter: drop-shadow(2px 2px 0 var(--secondary-color));
+
+.fa-css3-alt {
+  color: #2196f3;
+  -webkit-filter: drop-shadow(2px 2px 0 var(--secondary-color));
+  filter: drop-shadow(2px 2px 0 var(--secondary-color));
 }
-.fa-css3-alt{
-    color: #2196f3;
-    -webkit-filter: drop-shadow(2px 2px 0 var(--secondary-color));
-    filter: drop-shadow(2px 2px 0 var(--secondary-color));
+
+.fa-js {
+  color: #f7df1e;
+  -webkit-filter: drop-shadow(2px 2px 0 var(--secondary-color));
+  filter: drop-shadow(2px 2px 0 var(--secondary-color));
 }
-.fa-js{
-    color: #f7df1e;
-    -webkit-filter: drop-shadow(2px 2px 0 var(--secondary-color));
-    filter: drop-shadow(2px 2px 0 var(--secondary-color));
+
+.fa-bootstrap {
+  color: #563d7c;
+  -webkit-filter: drop-shadow(2px 2px 0 var(--secondary-color));
+  filter: drop-shadow(2px 2px 0 var(--secondary-color));
 }
-.fa-bootstrap{
-    color: #563d7c;
-    -webkit-filter: drop-shadow(2px 2px 0 var(--secondary-color));
-    filter: drop-shadow(2px 2px 0 var(--secondary-color));
+
+.progress-bar {
+  width: 90%;
+  height: 15px;
+  background: var(--secondary-color);
+  margin-left: 30px;
+  border-radius: 15px;
+  margin: auto 10%;
+  border: 2px solid var(--secondary-color);
 }
-.progress-bar{
-    width: 90%;
-    height: 15px;
-    background: var(--secondary-color);
-    margin-left: 30px;
-    border-radius: 15px;
-    margin: auto 10%;
-    border: 2px solid var(--secondary-color);
+
+.progress {
+  height: 11px;
+  border-radius: 15px;
+  border: none;
+  min-width: fit-content;
+  padding: 0 3px;
 }
-.progress{
-    height: 11px;
-    border-radius: 15px;
-    border: none;
-    min-width: fit-content;
-    padding: 0 3px;
+
+.progress span {
+  color: var(--secondary-color);
+  font-size: 11px;
+  display: block;
+  position: relative;
+  letter-spacing: 2px;
+  font-weight: bolder;
+  top: -1px;
 }
-.progress span{
-    color: var(--secondary-color);
-    font-size: 11px;
-    display: block;
-    position: relative;
-    letter-spacing: 2px;
-    font-weight: bolder;
-    top: -1px;
-}
-/* .progress::after{
+
+/** Esto hace que en la barra de progreso aparesca un circulo */
+/* .progress::after {
     content: '';
     display: block;
     position: relative;
@@ -294,199 +313,401 @@
     transform: translate(50%, -75%);
     border: 2px solid var(--tertiary-color);
 } */
-.weather-app-p-html{
-    background: var(--html-color);
-    width: 8.2%;
-}
-.weather-app-p-css{
-    background: var(--css-color);
-    width: 56.6%;
-}
-.weather-app-p-js{
-    background: var(--js-color);
-    width: 35.2%;
-}
-.weather-app-p-bootstrap{
-    background: var(--js-color);
-    width: 35.2%;
-}
-.zapateria-app-p-html{
-    background: var(--html-color);
-    width: 90.4%;
-}
-.zapateria-app-p-css{
-    background: var(--css-color);
-    width: 4.2%;
-}
-.zapateria-app-p-js{
-    background: var(--js-color);
-    width: 3.4%;
-}
-.zapateria-app-p-boot{
-    background: var(--boot-color);
-    width: 2.0%;
-}
-.Digital-app-p-html{
-    background: var(--html-color);
-    width: 61.0%;
-}
-.Digital-app-p-css{
-    background: var(--css-color);
-    width: 39.0%;
-}
-.Scroll-app-p-html{
-    background: var(--html-color);
-    width: 28.7%;
-}
-.Scroll-app-p-css{
-    background: var(--css-color);
-    width: 31.0%;
-}
-.Scroll-app-p-js{
-    background: var(--js-color);
-    width: 40.3%;
-}
-.hoteles-app-p-html{
-    background: var(--html-color);
-    width: 9.3%;
-}
-.hoteles-app-p-css{
-    background: var(--css-color);
-    width: 27.0%;
-}
-.hoteles-app-p-js{
-    background: var(--js-color);
-    width: 63.7%;
+
+.weather-app-p-html {
+  background: var(--html-color);
+  width: 8.2%;
 }
 
-.project img{
-    width: 100%;
+.weather-app-p-css {
+  background: var(--css-color);
+  width: 56.6%;
 }
-.project-2 img{
-    width: 100%;
+
+.weather-app-p-js {
+  background: var(--js-color);
+  width: 35.2%;
 }
-.icons img{
+
+/* .weather-app-p-bootstrap {
+    background: var(--js-color);
+    width: 35.2%;
+} */
+
+/* .icons img {
     width: 50%;
     border-radius: 0px;
-}
-/********************************************************** Medias Queries */
+} */
+/**                                                                                MEDIAS QUIERIES */
+/*! Esto se aplica nada mas a los telefonos con la pantalla de 360 a 480 pixeles */
+@media only screen and (min-width: 360px) and (max-width: 480px) {
+  /* *                                                              GENERAL */
+  /* !ocultamos el logo personal */
+  .logo {
+    display: none;
+  }
+  /* !Esto posiciona el menu hamburgesa un poco separado de la esquina */
+  .menuToggle {
+    margin: 0.5em;
+  }
+  .content {
+    height: 100vh;
+    padding: 10% 0;
+  }
+  .triangulo {
+    display: none;
+  }
+  /* !<Ocultamos el footer */
+  .footer {
+    display: none;
+  }
+  /* *                                                               ABOUT */
+  .about {
+    width: 90%;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 7em), 1fr));
+    grid-gap: 0;
+  }
+  .about h2 {
+    width: 90%;
+    font-size: 1.5rem;
+    grid-column: span 3;
+    margin: auto;
+  }
+  .about h2::after {
+    top: -35px;
+  }
+  .foto {
+    grid-column: span 3;
+    width: 50%;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+    align-content: center;
+    margin: auto;
+  }
+  .about .texto p {
+    width: 100%;
+    padding: 5%;
+  }
 
-/* @media (max-width: 624px){ */
-    @media (max-width: 770px){
-    .project{
-        grid-template-columns: 1fr;
-    grid-template-areas:    "titulo"
-                            "imagen"
-                            "info";
-    }
-    .project-2{
-        grid-template-columns: 1fr;
-    grid-template-areas:    "titulo"
-                            "imagen"
-                            "info";
-    }
-    .info{
-        padding: 0;
-    }
-    .about{
-        grid-template-columns: 1fr;
-        width: 90%;
-    }
-    .texto{
-        top: -30%;
-    }
-    .texto h2{
-        font-size: 1.5em;
-        width: 100%;
-        padding-bottom: 5%;
-    }
-    .texto h2::after{
-        top: -35px;
-    }
-    .texto p{
-        font-size: .8em;
-        width: 80%;
-        margin: auto;
-        text-align: justify;
-    }
-    .subtitulo{
-        font-size: 1.5em;
-        width: 100%;
-    }
-    .subtitulo::after{
-        top: -35px;
-    }
-    .about img{
-        width: 50%;
-    }
-    .triangulo{
-         border-top: 50px solid white;
-    }
-    .triangulo-2{
-        border-top: 50px solid var(--main-color);
-   }
-    .icons{
-        width: 80%;
-        margin: auto;
-    }
-    .icons i{
-        font-size: .6em;
-    }
-    .menuToggle{
-        margin: 1em 0;
-        border-radius: 0;
-        border-bottom-left-radius: 10px;
-        border-top-left-radius: 10px;
-    }
-    .logo{
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 10%;
-        z-index: 3;
-        opacity: 0;
-    }
-    .logo img{
-        width: 100%;
-    }
-    .menu{
-        height: calc(100vh + 1.5em);
-        width: 50vw;
-    }
-    .technologies{
-        width: 80%;
-        margin-top: 0;
-        grid-gap: 0;
-        grid-template-columns: repeat(auto-fit, minmax(min(100%, 4rem), 1fr));
-    }
-    .tech{
-        font-size: .8em;
-    }
-    .project-container{
-        width: 100%;
-        border-radius: 0px;
-        padding: 5%;
-        padding-top: 20%;
-        margin-bottom: 0;
-    }
-    .project-container p{
-        padding: 1.5em 0;
-    }
-    .content{
-        padding-bottom: 0px;
-    }
+  /* *                                                        TECHNOLOGIES */
+  .technologies {
+    width: 90%;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 4rem), 1fr));
+    margin: 5%;
+  }
+  .technologies div {
+    padding: 0;
+    grid-template-rows: 1fr 1fr;
+  }
+  .technologies img {
+    width: 90%;
+    max-width: 65px;
+  }
+  .tech {
+    font-size: 1rem;
+    padding: 0;
+  }
+  /* *                                                             TITTLES */
+  .subtitulo {
+    display: none;
+  }
+  /* *                                                           PROYECTOS */
+
+  /* !La clase que encierra a todos los proyectos individualmente */
+  .project-container {
+    background: linear-gradient(
+      -12deg,
+      var(--main-color) 50%,
+      var(--secondary-color) 50%
+    );
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    left: 0;
+  }
+  /* !Esta clase es para cada proyecto indivudualmente */
+  .project {
+    display: inline-block;
+    margin-bottom: 0;
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    left: 0;
+  }
+
+  /* *                                               NOMBRE DEL PROYECTO */
+  /* !Hacemos que el titulo se muestre de forma horizontal(en el diseño de tablets y pc's se muestra vertical) */
+  .project_tittle {
+    writing-mode: horizontal-tb;
+    width: 90%;
+    margin: 0;
+  }
+  /* !Este div es el que gira cuando pasamos al siguiente proyecto */
+  .project_name {
+    background-color: var(--secondary-color);
+    width: 100%;
+    transform-origin: center top;
+    margin: 5rem 0 0% 0;
+  }
+  /* !Esto es la primera parte del nombre del proyecto (la parte mas grande) */
+  .project_name > h3 span {
+    font-family: "New Title", serif;
+    color: var(--main-color);
+    font-size: 5rem;
+    padding: 0.5rem 0.2rem 0 1rem;
+  }
+  /* !La segunda parte del nombre del proyecto */
+  .project h3 {
+    display: flex;
+    align-items: baseline;
+  }
+  /* !Hacemos que la linea que esta despues del nombre, desaparezca */
+  .project_name h3::after {
+    display: none;
+  }
+  /* !Desaparecemos el numero de proyecto que esta en el nombre del proyecto */
+  .project_number {
+    display: none;
+  }
+  /* *                                           IMAGENES DE LOS PROYECTOS */
+  /*!Estilos para que solo se vean las imagenes con la clases front y back */
+  .face {
+    backface-visibility: hidden;
+    opacity: 0;
+  }
+  /* !Esto hace mas grande la imagen del proyecto */
+  .project_img {
+    width: 100%;
+  }
+  .project_img img {
+    width: 100%;
+  }
+  /* !Mostramos solo la imagen del current project y la del siguiente projecto */
+  .project_img .front {
+    transform: rotateY(0deg);
+    opacity: 1;
+    transition: 0.8s;
+    z-index: 3;
+  }
+  /* !Le ponemos opacity de 1 para que cuando gire se pueda ver
+  !Con el transfor hacemos que se oculte para poder dar el efecto de que esta detras de la imagen del current project*/
+  .project_img .back {
+    transform: rotateY(180deg);
+    opacity: 1;
+    transition: 0.8s;
+  }
+  /**                                              DESCRIPCION DEL PROYECTO*/
+  /* !Esta clase encierra toda la descripción del proyecto y los iconos de las tecnologias y la imagen del proyecto */
+  .card {
+    position: relative;
+    width: 70%;
+    margin: auto;
+  }
+  /* !Esta clase la tienen ambas caras del card */
+  .face_card {
+    position: absolute;
+    backface-visibility: hidden;
+    overflow: hidden;
+  }
+  /* !Con las siguientes clases mostramos solo la imagen del proyecto y no la descripción  */
+  .card .face_card_front {
+    width: 100%;
+    transform: rotateY(0deg);
+    opacity: 1;
+    transition: 0.8s;
+    z-index: 3;
+  }
+  .card .face_card_back {
+    transform: rotateY(180deg);
+    opacity: 1;
+    transition: 0.8s;
+  }
+  /* !Con el hover giramos ambas caras del .card para dar el efecto de giro */
+  .card:hover .face_card_front {
+    transform: rotateY(180deg);
+  }
+  .card:hover .face_card_back {
+    transform: rotateY(0deg);
+    z-index: 2;
+  }
+  /* !Este div contiene la informcion del proyecto que este seleccionado */
+  .info {
+    width: 100%;
+    margin: auto;
+    background-color: var(--secondary-color);
+    background: linear-gradient(
+      0deg,
+      var(--secondary-color) 0%,
+      var(--main-color) 80%
+    );
+    opacity: 0;
+    border-radius: 1rem;
+    border: none;
+    padding: 2rem 1rem;
+  }
+  .active_info {
+    animation: fade-in 2s forwards;
+  }
+  /* !Esto es el numero que aparece dentro de la info de los proyectos */
+  .info_number {
+    font-family: "Ranade", sans-serif;
+    -webkit-text-stroke-width: thin;
+    font-size: 100px;
+    color: var(--secondary-color);
+    position: absolute;
+    top: -35px;
+    right: -8px;
+    opacity: 0.3;
+  }
+  /* !Esto es la descripcion del proyecto */
+  .project-container p {
+    width: 90%;
+    margin: auto;
+    font-family: "Amulya", sans-serif;
+    color: var(--secondary-color);
+    font-weight: lighter;
+    text-align: justify;
+  }
+  /* !Esto es la linea divisora que esta en la info de los proyectos */
+  .linea {
+    border-top: none;
+    border: 1px solid var(--secondary-color);
+    opacity: 0.3;
+    width: 80%;
+    margin: 1.5rem auto;
+  }
+  /* !Esto acomoda los iconos de forma horizontal */
+  .icons {
+    background: none;
+    align-content: center;
+    width: 100%;
+    margin: auto;
+    box-shadow: none;
+    font-size: 2.5rem;
+  }
+  .icons i {
+    line-height: normal;
+    font-size: 2rem;
+  }
+  .button {
+    position: relative;
+    width: 90%;
+    height: 2.5em;
+    background-color: var(--main-color);
+    margin: 2rem auto;
+    margin-bottom: 0;
+    border-radius: 0.9em;
+    display: flex;
+    padding: 0.35em;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 1.6em -0.1em var(--secondary-color);
+    font-family: "Amulya", sans-serif;
+    font-weight: 100;
+    color: var(--secondary-color);
+  }
+  .button .icon {
+    position: absolute;
+    right: 0.25em;
+    background-color: var(--secondary-color);
+    fill: var(--main-color);
+    width: 2.2em;
+    height: 2.2em;
+    border-radius: 0.7em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  /* *                                                  PROJECT NAVEGATOR */
+  /* !Esta clase es para las flechitas que estan al costado de las imagenes de los proyectos */
+  .carousel_nav {
+    z-index: 2;
+    position: absolute;
+    right: 0;
+    bottom: 50vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 10px;
+  }
+  #moveLeft {
+    fill: var(--main-color);
+  }
+  /* !Este es el div que contiene los circulos blancos que indican el currente project */
+  .project_indicator {
+    width: 100%;
+    position: absolute;
+    bottom: 3vh;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+  }
+  /* !Esto es el indicador(circulo relleno blanco) */
+  .indicator {
+    display: block;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border: 0;
+    width: 16px;
+    height: 16px;
+    background-color: var(--secondary-color);
+    border-radius: 100%;
+    padding: 0;
+    margin: 0 15px;
+    position: relative;
+    opacity: 0.4;
+    transition: opacity 0.4s ease-in-out;
+    outline: none;
+    pointer-events: none;
+  }
+  /* !Esto hace que el indicador del current project este mas blanco que los demas indicadores */
+  .indicator.active {
+    opacity: 0.8;
+  }
+  /* !Esto es el circulo que rodea al indicador pero no se ve y le tenemos que dar un opacity de 1 para poder verlo */
+  .indicator:before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+    border: 1px solid var(--secondary-color);
+    opacity: 0.8;
+    transition: opacity, rotate 0.4s ease-in-out, width 0.6s ease-in-out,
+      height 0.6s ease-in-out;
+  }
+  /* !Esta linea de codigo hace que cuando un indicador este activo muestre una circulo mas grande alrededor de este y 
+  ! le da una opacity de 1 para que se pueda ver */
+  .indicator.active:before {
+    width: 280%;
+    height: 280%;
+    opacity: 1;
+  }
 }
-@media (max-width: 480px){
-    .menu{
-        width: calc(100vw + 1.5em);
-    }
-    .footer{
-        padding:0.5em .5em;
-        font-size: 1.7em;
-    }
-    .menuToggle{
-        margin: 0;
-        border-radius: 0;
-        border-bottom-left-radius: 10px;
-    }
+/** Medium devices such as tablets (768px and up) */
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+  .content {
+    background-color: yellow;
+  }
 }
+
+/** Large devices such as laptops (1024px and up) */
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  .content {
+    background-color: black;
+  }
+}
+
+/** Largest devices such as desktops (1280px and up) */
+/* @media screen and (min-width: 1025px) and (max-width: 2000px) {
+  .content {
+    background-color: pink;
+  }
+} */

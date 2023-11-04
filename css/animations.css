@@ -1,0 +1,62 @@
+/* //////////////////////////////////////////////////////ANIMACION DEL SLIDER DE PROYECTOS */
+#moveLeft {
+  animation: slide-left 3s ease-in-out infinite both;
+}
+
+#moveRight {
+  animation: slide-right 3s ease-in-out infinite;
+}
+
+@keyframes slide-left {
+  0% {
+    transform: translateX(0);
+  }
+
+  50% {
+    transform: translateX(-5px);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slide-right {
+  0% {
+    transform: translateX(0);
+  }
+
+  50% {
+    transform: translateX(5px);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+/* *                                                       ANIMACIONES DEL NOMBRE DEL PROYECTO */
+@keyframes return-animation {
+  0% {
+    transform: rotateX(270deg);
+  }
+  100% {
+    transform: rotateX(0deg);
+  }
+}
+@keyframes next-animation {
+  0% {
+    transform: rotateX(0deg);
+  }
+  100% {
+    transform: rotateX(270deg);
+    z-index: 2;
+  }
+}
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

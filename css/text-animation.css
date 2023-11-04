@@ -1,7 +1,8 @@
-.hidden{
+.hidden {
     opacity: 0;
 }
-.guion-bajo{
+
+.guion-bajo {
     width: 25px;
     font-weight: bolder;
     z-index: 3;
@@ -12,7 +13,8 @@
     background: #0A1931;
     padding-left: 5px;
 }
-.guion-bajoDos{
+
+.guion-bajoDos {
     width: 25px;
     font-weight: bolder;
     z-index: 3;
