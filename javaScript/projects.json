@@ -1,0 +1,88 @@
+{
+  "projects": [
+    {
+      "name": "SHOE",
+      "second_name": "store",
+      "first_number": "07",
+      "second_number": "01",
+      "description": "Esta pagina muestra pokemones",
+      "html_percent": "8.2%",
+      "css_percent": "18.3%",
+      "js_percent": "28.4%",
+      "url": "https://leomazuca.github.io/poke-api/",
+      "img": "assets/img/projects_mobile/poke_api_v2.png"
+    },
+    {
+        "name": "DIGITAL",
+        "second_name": "product",
+        "first_number": "06",
+        "second_number": "02",
+        "description": "lorem ipsum",
+        "html_percent": "8.2%",
+        "css_percent": "38.3%",
+        "js_percent": "18.4%",
+        "url": "https://leomazuca.github.io/lyricssearch/",
+        "img": "assets/img/projects_mobile/lyrics_app_v2.png"
+      },
+      {
+        "name": "SINGLE-PAGE",
+        "second_name": "aplication",
+        "first_number": "05",
+        "second_number": "03",
+        "description": "lorem ipsum",
+        "html_percent": "8.2%",
+        "css_percent": "18.3%",
+        "js_percent": "28.4%",
+        "url": "https://leomazuca.github.io/poke-api/",
+        "img": "assets/img/projects_mobile/checkout_stripe_v2.png"
+      },
+      {
+        "name": "SCROLL",
+        "second_name": "app",
+        "first_number": "04",
+        "second_number": "04",
+        "description": "lorem ipsum",
+        "html_percent": "8.2%",
+        "css_percent": "38.3%",
+        "js_percent": "18.4%",
+        "url": "https://leomazuca.github.io/poke-api/",
+        "img": "assets/img/projects_mobile/scroll_v2.png"
+      },
+      {
+        "name": "CHECKOUT",
+        "second_name": "stripe",
+        "first_number": "03",
+        "second_number": "05",
+        "description": "lorem ipsum",
+        "html_percent": "8.2%",
+        "css_percent": "38.3%",
+        "js_percent": "18.4%",
+        "url": "https://leomazuca.github.io/poke-api/",
+        "img": "assets/img/projects_mobile/spa_v2.png"
+      },
+      {
+        "name": "LYRICS",
+        "second_name": "finder",
+        "first_number": "02",
+        "second_number": "06",
+        "description": "lorem ipsum",
+        "html_percent": "8.2%",
+        "css_percent": "38.3%",
+        "js_percent": "18.4%",
+        "url": "https://leomazuca.github.io/poke-api/",
+        "img": "assets/img/projects_mobile/tienda_v2.png"
+      },
+      {
+        "name": "POKE",
+        "second_name": "app",
+        "first_number": "01",
+        "second_number": "07",
+        "description": "lorem ipsum",
+        "html_percent": "8.2%",
+        "css_percent": "38.3%",
+        "js_percent": "18.4%",
+        "url": "https://leomazuca.github.io/poke-api/",
+        "img": "assets/img/projects_mobile/zapateria_v2.png"
+      }
+  ]
+}
