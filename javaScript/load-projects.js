@@ -1,20 +1,55 @@
 const $main = document.querySelector(".project-container"),
   $project_indicator = document.querySelector(".project_indicator");
 let $template = "",
-  $indicator_template = "";
+  $indicator_template = "",
+  reverse_first_names = [],
+  reverse_second_names = [],
+  projects_images = [],
+  names_indicators = 0;
 async function loadProjects(url) {
   try {
     let res = await fetch(url),
       json = await res.json();
     if (!res.ok) throw { status: res.status, statusText: res.statusText };
     try {
+      /* !Con este for guardamos los nombres de los proyectos en dos arrays para, si es necesario ordenarlos en reversa*/
+      for (let index = 0; index < 7; index++) {
+        reverse_first_names[index] = json.projects[index].name;
+        reverse_second_names[index] = json.projects[index].second_name;
+      }
+      /* !Aqui dependiendo de en que dispositivo esten visualizando la pagina mostramos una u otra imagen */
+      if (screen.width <= 480) {
+        /* !Hacemos que los nombres de los proyectos se ordenen en reversa para que se puedan mostrar bien solo en caso 
+        de que la pagina se este visualizando en pantallas con un maximo de 480px Tambien agregamos las imagenes con el
+        mockup de Iphone*/
+        reverse_first_names.reverse();
+        reverse_second_names.reverse();
+        for (let index = 0; index < 7; index++) {
+          projects_images[index] = json.projects[index].mobile_img;
+        }
+      } else if (screen.width > 480 && screen.width <= 768) {
+        console.log("es tablet");
+        for (let index = 0; index < 7; index++) {
+          projects_images[index] = json.projects[index].tablet_img;
+        }
+      } else if (screen.width > 768 && screen.width <= 1024) {
+        console.log("es laptop");
+        for (let index = 0; index < 7; index++) {
+          projects_images[index] = json.projects[index].laptop_img;
+        }
+      } else {
+        console.log("es pc de escritorio");
+        for (let index = 0; index < 7; index++) {
+          projects_images[index] = json.projects[index].desktop_img;
+        }
+      }
       json.projects.forEach((project) => {
         $template += `
       <div class="project">
       <div class="project_tittle">
           <div class="project_name">
-              <h3><span>${project.name} </span>
-                  ${project.second_name}
+              <h3><span>${reverse_first_names[names_indicators]} </span>
+                  ${reverse_second_names[names_indicators]}
               </h3>
           </div>
           <div class="project_number">
@@ -23,24 +58,24 @@ async function loadProjects(url) {
       </div>
       <div class="card">
           <div class="project_img">
-              <img src="${project.img}" alt="Cargando..." class="face">
+              <img src="${projects_images[names_indicators]}" alt="Cargando..." class="face">
           </div>
           <div class="info">
-              <h3 class="info_number">${project.second_number}</h3>
+              <h3 class="info_number">${project.first_number}</h3>
               <p>${project.description}</p>
               <hr class="linea">
               <div class="icons">
                   <i class="fab fa-html5" title="HTML 5"></i>
                   <div class="progress-bar">
-                      <div class="progress weather-app-p-html"><span>${project.html_percent}</span></div>
+                      <div class="progress" style="background: var(--html-color);width: ${project.html_percent};"><span >${project.html_percent}</span></div>
                   </div>
                   <i class="fab fa-css3-alt" title="CSS 3"></i>
                   <div class="progress-bar">
-                      <div class="progress weather-app-p-css"><span>${project.css_percent}</span></div>
+                      <div class="progress" style="background: var(--css-color);width: ${project.css_percent};"><span>${project.css_percent}</span></div>
                   </div>
                   <i class="fab fa-js" title="JavaScript"></i>
                   <div class="progress-bar">
-                      <div class="progress weather-app-p-js"><span>${project.js_percent}</span></div>
+                      <div class="progress" style="background: var(--js-color);width: ${project.js_percent};"><span>${project.js_percent}</span></div>
                   </div>
               </div>
               <div class="button" id="goToButton" data-url="${project.url}">
@@ -54,7 +89,9 @@ async function loadProjects(url) {
       
   </div>
                 `;
+        /* !Agregamos un indicador(los circulitos que indican el proyecto seleccionado) por cada proyecto en el json */
         $indicator_template += `<button class="indicator"></button>`;
+        names_indicators++;
       });
     } catch (err) {
       console.log(err);
@@ -210,8 +247,8 @@ document.addEventListener("DOMContentLoaded", async (e) => {
       /*! esta parte del codigo hace que las imagenes de los proyectos giren y muestren la siguiente */
       imgs[current].setAttribute("style", "transform : rotateY(180deg)");
       imgs[current + 1].setAttribute("style", "transform :rotateY(360deg)");
-      /* document.querySelector(".front").classList.remove("front"); */
-      /* document.querySelector(".back").classList.remove("back"); */
+      document.querySelector(".front").classList.remove("front");
+      document.querySelector(".back").classList.remove("back");
       imgs[current].classList.add("front");
       imgs[current + 1].classList.add("back");
       /* Esto le da el efecto fade-in a la info del proyecto */

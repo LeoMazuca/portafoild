@@ -1,12 +1,31 @@
-/* //////////////////////////////////////////////////////ANIMACION DEL SLIDER DE PROYECTOS */
+/* *                          ANIMACION DE LEO MAZUCA PEREZ */
+@keyframes animar {
+  0% {
+    stroke-dashoffset: 425px;
+  }
+  100% {
+    stroke-dashoffset: 0px;
+  }
+}
+/* *                          ANIMACION DE LA FLECHA QUE APARECE EN EL INICIO */
+@keyframes arrow {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+/* *                           ANIMACION DE LOS BOTONES DE NAVEGACION ENTRE LOS PROYECTOS */
 #moveLeft {
   animation: slide-left 3s ease-in-out infinite both;
 }
-
 #moveRight {
   animation: slide-right 3s ease-in-out infinite;
 }
-
 @keyframes slide-left {
   0% {
     transform: translateX(0);
@@ -20,7 +39,6 @@
     transform: translateX(0);
   }
 }
-
 @keyframes slide-right {
   0% {
     transform: translateX(0);
@@ -34,7 +52,7 @@
     transform: translateX(0);
   }
 }
-/* *                                                       ANIMACIONES DEL NOMBRE DEL PROYECTO */
+/* *                                                  ANIMACIONES DEL NOMBRE DEL PROYECTO */
 @keyframes return-animation {
   0% {
     transform: rotateX(270deg);
@@ -52,6 +70,7 @@
     z-index: 2;
   }
 }
+/* *                                         ANIMACION DE LA DESCRIPCION DE LOS PROYECTOS */
 @keyframes fade-in {
   0% {
     opacity: 0;

@@ -1,0 +1,374 @@
+/**                                                                                MEDIAS QUIERIES */
+/*! Esto se aplica nada mas a los telefonos con la pantalla de 360 a 480 pixeles */
+@media only screen and (min-width: 360px) and (max-width: 480px) {
+  /* *                                                              GENERAL */
+  /* !ocultamos el logo personal */
+  .logo {
+    display: none;
+  }
+  /* !Esto posiciona el menu hamburgesa un poco separado de la esquina */
+  .menuToggle {
+    margin: 0.5em;
+  }
+  .content {
+    height: 100vh;
+    padding: 10% 0;
+  }
+  .triangulo {
+    display: none;
+  }
+  /* !<Ocultamos el footer */
+  .footer {
+    display: none;
+  }
+  /* *                                                               ABOUT */
+  .about {
+    width: 90%;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 7em), 1fr));
+    grid-gap: 0;
+  }
+  .about h2 {
+    width: 90%;
+    font-size: 1.5rem;
+    grid-column: span 3;
+    margin: auto;
+  }
+  .about h2::after {
+    top: -35px;
+  }
+  .first_part_about {
+    grid-column: span 3;
+  }
+  .foto {
+    grid-column: span 3;
+    width: 40%;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+    align-content: center;
+    margin: auto;
+  }
+  .about .texto p {
+    width: 100%;
+    padding: 5%;
+  }
+
+  /* *                                                        TECHNOLOGIES */
+  .technologies {
+    width: 90%;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 4rem), 1fr));
+    margin: 5%;
+  }
+  .technologies div {
+    padding: 0;
+    grid-template-rows: 1fr 1fr;
+  }
+  .technologies img {
+    width: 90%;
+    max-width: 65px;
+  }
+  .tech {
+    font-size: 1rem;
+    padding: 0;
+  }
+  /* *                                                             TITTLES */
+  .subtitulo {
+    display: none;
+  }
+  /* *                                                           PROYECTOS */
+
+  /* !La clase que encierra a todos los proyectos individualmente */
+  .project-container {
+    background: linear-gradient(
+      -12deg,
+      var(--main-color) 50%,
+      var(--secondary-color) 50%
+    );
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    left: 0;
+  }
+  /* !Esta clase es para cada proyecto indivudualmente */
+  .project {
+    display: inline-block;
+    margin-bottom: 0;
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    left: 0;
+    padding: 0%;
+  }
+  .project:nth-child(even) {
+    background: none;
+  }
+  /* *                                               NOMBRE DEL PROYECTO */
+  /* !Hacemos que el titulo se muestre de forma horizontal(en el diseño de tablets y pc's se muestra vertical) */
+  .project_tittle {
+    writing-mode: horizontal-tb;
+    width: 90%;
+    margin: 0;
+    letter-spacing: 0.3rem;
+  }
+  /* !Este div es el que gira cuando pasamos al siguiente proyecto */
+  .project_name {
+    background-color: var(--secondary-color);
+    width: 100%;
+    transform-origin: center top;
+    margin: 5rem 0 0% 0;
+  }
+  /* !Esto es la primera parte del nombre del proyecto (la parte mas grande) */
+  .project_name > h3 span {
+    font-family: "New Title", serif;
+    color: var(--main-color);
+    font-size: 5rem;
+    padding: 0.5rem 0.2rem 0 1rem;
+    letter-spacing: normal;
+  }
+  /* !La segunda parte del nombre del proyecto */
+  .project h3 {
+    display: flex;
+    align-items: baseline;
+  }
+  /* !Hacemos que la linea que esta despues del nombre, desaparezca */
+  .project_name h3::after {
+    display: none;
+  }
+  /* !Desaparecemos el numero de proyecto que esta en el nombre del proyecto */
+  .project_number {
+    display: none;
+  }
+  /* *                                           IMAGENES DE LOS PROYECTOS */
+  /*!Estilos para que solo se vean las imagenes con la clases front y back */
+  .face {
+    backface-visibility: hidden;
+    opacity: 0;
+  }
+  /* !Esto hace mas grande la imagen del proyecto */
+  .project_img {
+    width: 100%;
+  }
+  .project_img img {
+    width: 100%;
+  }
+  /* !Mostramos solo la imagen del current project y la del siguiente projecto */
+  .project_img .front {
+    transform: rotateY(0deg);
+    opacity: 1;
+    transition: 0.8s;
+    z-index: 3;
+  }
+  /* !Le ponemos opacity de 1 para que cuando gire se pueda ver
+  !Con el transfor hacemos que se oculte para poder dar el efecto de que esta detras de la imagen del current project*/
+  .project_img .back {
+    transform: rotateY(180deg);
+    opacity: 1;
+    transition: 0.8s;
+  }
+  /**                                              DESCRIPCION DEL PROYECTO*/
+  /* !Esta clase encierra toda la descripción del proyecto y los iconos de las tecnologias y la imagen del proyecto */
+  .card {
+    position: relative;
+    width: 70%;
+    margin: auto;
+    align-items: normal;
+  }
+  /* !Esta clase la tienen ambas caras del card */
+  .face_card {
+    position: absolute;
+    backface-visibility: hidden;
+    overflow: hidden;
+  }
+  /* !Con las siguientes clases mostramos solo la imagen del proyecto y no la descripción  */
+  .card .face_card_front {
+    transform: rotateY(0deg);
+    opacity: 1;
+    transition: 0.8s;
+    z-index: 3;
+  }
+  .card .face_card_back {
+    transform: rotateY(180deg);
+    opacity: 1;
+    transition: 0.8s;
+  }
+  /* !Con el hover giramos ambas caras del .card para dar el efecto de giro */
+  .card:hover .face_card_front {
+    transform: rotateY(180deg);
+  }
+  .card:hover .face_card_back {
+    transform: rotateY(0deg);
+    z-index: 2;
+  }
+  /* !Este div contiene la informcion del proyecto que este seleccionado */
+  .info {
+    width: 100%;
+    margin: auto;
+    background-color: var(--secondary-color);
+    background: linear-gradient(
+      0deg,
+      var(--secondary-color) 0%,
+      var(--main-color) 80%
+    );
+    opacity: 0;
+    border-radius: 1rem;
+    border: none;
+    padding: 2rem 1rem;
+  }
+  .active_info {
+    animation: fade-in 2s forwards;
+  }
+  /* !Esto es el numero que aparece dentro de la info de los proyectos */
+  .info_number {
+    font-family: "Ranade", sans-serif;
+    -webkit-text-stroke-width: thin;
+    font-size: 100px;
+    color: var(--secondary-color);
+    position: absolute;
+    top: -35px;
+    right: -8px;
+    opacity: 0.3;
+  }
+  /* !Esto es la descripcion del proyecto */
+  .project-container p {
+    width: 90%;
+    margin: auto;
+    font-family: "Amulya", sans-serif;
+    color: var(--secondary-color);
+    font-weight: lighter;
+    text-align: justify;
+  }
+  /* !Esto es la linea divisora que esta en la info de los proyectos */
+  .linea {
+    border-top: none;
+    border: 1px solid var(--secondary-color);
+    opacity: 0.3;
+    width: 80%;
+    margin: 1.5rem auto;
+  }
+  /* !Esto acomoda los iconos de forma horizontal */
+  .icons {
+    background: none;
+    align-content: center;
+    width: 100%;
+    margin: auto;
+    box-shadow: none;
+    font-size: 2.5rem;
+  }
+  .icons i {
+    line-height: normal;
+    font-size: 2rem;
+  }
+  /* *                                                  PROJECT NAVEGATOR */
+  /* !Esta clase es para las flechitas que estan al costado de las imagenes de los proyectos */
+  .carousel_nav {
+    z-index: 2;
+    position: absolute;
+    right: 0;
+    bottom: 50vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 10px;
+  }
+  #moveLeft {
+    fill: var(--main-color);
+  }
+  /* !Este es el div que contiene los circulos blancos que indican el currente project */
+  .project_indicator {
+    width: 100%;
+    position: absolute;
+    bottom: 3vh;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+  }
+  /* !Esto es el indicador(circulo relleno blanco) */
+  .indicator {
+    display: block;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border: 0;
+    width: 16px;
+    height: 16px;
+    background-color: var(--secondary-color);
+    border-radius: 100%;
+    padding: 0;
+    margin: 0 15px;
+    position: relative;
+    opacity: 0.4;
+    transition: opacity 0.4s ease-in-out;
+    outline: none;
+    pointer-events: none;
+  }
+  /* !Esto hace que el indicador del current project este mas blanco que los demas indicadores */
+  .indicator.active {
+    opacity: 0.8;
+  }
+  /* !Esto es el circulo que rodea al indicador pero no se ve y le tenemos que dar un opacity de 1 para poder verlo */
+  .indicator:before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+    border: 1px solid var(--secondary-color);
+    opacity: 0.8;
+    transition: opacity, rotate 0.4s ease-in-out, width 0.6s ease-in-out,
+      height 0.6s ease-in-out;
+  }
+  /* !Esta linea de codigo hace que cuando un indicador este activo muestre una circulo mas grande alrededor de este y 
+  ! le da una opacity de 1 para que se pueda ver */
+  .indicator.active:before {
+    width: 280%;
+    height: 280%;
+    opacity: 1;
+  }
+}
+/** Medium devices such as tablets (768px and up) */
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+  .content {
+    background-color: yellow;
+  }
+}
+
+/** Large devices such as laptops (1024px and up) */
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  .content {
+    background-color: black;
+  }
+}
+
+/** Largest devices such as desktops (1280px and up) */
+@media screen and (min-width: 1025px) and (max-width: 2000px) {
+  /* *                                                                 PROYECTOS */
+  /* !ESTO ES EL NOMBRE DE LOS PROYECTOS */
+  .project {
+    display: flex;
+  }
+  .project:nth-child(even) {
+    flex-direction: row-reverse;
+  }
+  .project:nth-child(even) .card {
+    flex-direction: row;
+  }
+
+  .project_name > h3 > span {
+    -webkit-text-stroke: medium;
+  }
+  .card {
+    /* background-color: #2196f3; */
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+  }
+  /* !ESTO ES LA DESCRIPCION DE LOS PROYECTOS */
+  .info p {
+    padding: 2rem 1rem;
+  }
+}
