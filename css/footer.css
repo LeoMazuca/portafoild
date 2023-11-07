@@ -1,24 +1,19 @@
-:root{
-    --main-color: #185ADB;
-    --secondary-color: #0A1931;
-    --tertiary-color: #E8F6EF;
+.footer {
+  width: 100%;
+  position: relative;
+  background-color: var(--secondary-color);
+  z-index: 2;
+  font-size: 2em;
+  padding: 0.5em 1em;
+  text-align: left;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
-.footer{
-    width: 100%;
-    position: relative;
-    background-color: var(--secondary-color);
-    z-index: 2;
-    font-size: 2em;
-    padding: .5em 1em;
-    text-align: left;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.copyright {
+  font-size: 0.4em;
+  color: var(--main-color);
 }
-.copyright{
-    font-size: .4em;    
-    color: var(--main-color);
-}
-.footer a{
-    color:var(--main-color);
+.footer a {
+  color: var(--main-color);
 }

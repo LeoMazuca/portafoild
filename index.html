@@ -11,6 +11,7 @@
   <link rel="stylesheet" href="css/menu.css">
   <link rel="stylesheet" href="css/footer.css">
   <link rel="stylesheet" href="css/main-content.css">
+  <link rel="stylesheet" href="css/medias-queries.css">
   <link rel="stylesheet" href="css/text-animation.css">
   <link rel="stylesheet" href="css/animations.css">
   <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
@@ -176,13 +177,15 @@
 
           <div class="content">
             <div class="about" id="about">
-              <h2>
-                <span id="text"></span>
-                <div class="guion-bajo" id="console">&#95</div>
-              </h2>
-              <div class="foto">
-                <img src="img/Leonardo Mazuca Perez 12075621 LSCA.jpg" alt="Leonardo Mazuca Perez"
-                  title="Leonardo Mazuca Perez">
+              <div class="first_part_about">
+                <h2>
+                  <span id="text"></span>
+                  <div class="guion-bajo" id="console">&#95</div>
+                </h2>
+                <div class="foto">
+                  <img src="img/Leonardo Mazuca Perez 12075621 LSCA.jpg" alt="Leonardo Mazuca Perez"
+                    title="Leonardo Mazuca Perez">
+                </div>
               </div>
               <div class="texto">
                 <p>
@@ -195,33 +198,44 @@
                 </p>
               </div>
             </div>
-
+<!-- *                                                                  TECHNOLOGIES -->
             <div class="technologies">
               <div>
-                <a href="https://developer.mozilla.org/es/docs/Web/HTML" target="_blank"><img src="img/html5.png"
-                    alt=""></a>
+                <a href="https://developer.mozilla.org/es/docs/Web/HTML" target="_blank">
+                  <!-- <img src="assets/logos-icons/Technologies/bootstrap.svg"
+                    alt=""> -->
+                    <svg xmlns="http://www.w3.org/2000/svg" class="tech_icons" viewBox="0 0 384 512"><path d="M0 32l34.9 395.8L191.5 480l157.6-52.2L384 32H0zm308.2 127.9H124.4l4.1 49.4h175.6l-13.6 148.4-97.9 27v.3h-1.1l-98.7-27.3-6-75.8h47.7L138 320l53.5 14.5 53.7-14.5 6-62.2H84.3L71.5 112.2h241.1l-4.4 47.7z"/></svg>
+                  </a>
                 <h3 class="tech">HTML 5</h3>
               </div>
               <div>
-                <a href="https://developer.mozilla.org/es/docs/Web/CSS" target="_blank"><img src="img/css-3.png"
-                    alt=""></a>
+                <a href="https://developer.mozilla.org/es/docs/Web/CSS" target="_blank">
+                  <!-- <img src="img/css-3.png" alt=""> -->
+                  <svg xmlns="http://www.w3.org/2000/svg" class="tech_icons" viewBox="0 0 384 512">
+                    <path d="M0 32l34.9 395.8L192 480l157.1-52.2L384 32H0zm313.1 80l-4.8 47.3L193 208.6l-.3.1h111.5l-12.8 146.6-98.2 28.7-98.8-29.2-6.4-73.9h48.9l3.2 38.3 52.6 13.3 54.7-15.4 3.7-61.6-166.3-.5v-.1l-.2.1-3.6-46.3L193.1 162l6.5-2.7H76.7L70.9 112h242.2z"/></svg>
+                </a>
                 <h3 class="tech">CSS 3</h3>
               </div>
               <div>
-                <a href="https://developer.mozilla.org/es/docs/Web/JavaScript" target="_blank"><img
-                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/245px-Unofficial_JavaScript_logo_2.svg.png"
-                    alt=""></a>
+                <a href="https://developer.mozilla.org/es/docs/Web/JavaScript" target="_blank">
+                  <!-- <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/245px-Unofficial_JavaScript_logo_2.svg.png"alt=""> -->
+                  <svg xmlns="http://www.w3.org/2000/svg" class="tech_icons" viewBox="0 0 448 512">
+                    <path d="M0 32v448h448V32H0zm243.8 349.4c0 43.6-25.6 63.5-62.9 63.5-33.7 0-53.2-17.4-63.2-38.5l34.3-20.7c6.6 11.7 12.6 21.6 27.1 21.6 13.8 0 22.6-5.4 22.6-26.5V237.7h42.1v143.7zm99.6 63.5c-39.1 0-64.4-18.6-76.7-43l34.3-19.8c9 14.7 20.8 25.6 41.5 25.6 17.4 0 28.6-8.7 28.6-20.8 0-14.4-11.4-19.5-30.7-28l-10.5-4.5c-30.4-12.9-50.5-29.2-50.5-63.5 0-31.6 24.1-55.6 61.6-55.6 26.8 0 46 9.3 59.8 33.7L368 290c-7.2-12.9-15-18-27.1-18-12.3 0-20.1 7.8-20.1 18 0 12.6 7.8 17.7 25.9 25.6l10.5 4.5c35.8 15.3 55.9 31 55.9 66.2 0 37.8-29.8 58.6-69.7 58.6z"/></svg>
+                </a>
                 <h3 class="tech">JavaScript</h3>
               </div>
               <div>
-                <a href="https://getbootstrap.com/" target="_blank"><img
-                    src="https://seocom.agency/wp-content/uploads/2019/02/bootstrap-stack.png" alt=""></a>
+                <a href="https://getbootstrap.com/" target="_blank">
+                  <!-- <img src="https://seocom.agency/wp-content/uploads/2019/02/bootstrap-stack.png" alt=""> -->
+                  <svg xmlns="http://www.w3.org/2000/svg" class="tech_icons" viewBox="0 0 576 512">
+                    <path d="M333.5,201.4c0-22.1-15.6-34.3-43-34.3h-50.4v71.2h42.5C315.4,238.2,333.5,225,333.5,201.4z M517,188.6 c-9.5-30.9-10.9-68.8-9.8-98.1c1.1-30.5-22.7-58.5-54.7-58.5H123.7c-32.1,0-55.8,28.1-54.7,58.5c1,29.3-0.3,67.2-9.8,98.1 c-9.6,31-25.7,50.6-52.2,53.1v28.5c26.4,2.5,42.6,22.1,52.2,53.1c9.5,30.9,10.9,68.8,9.8,98.1c-1.1,30.5,22.7,58.5,54.7,58.5h328.7 c32.1,0,55.8-28.1,54.7-58.5c-1-29.3,0.3-67.2,9.8-98.1c9.6-31,25.7-50.6,52.1-53.1v-28.5C542.7,239.2,526.5,219.6,517,188.6z M300.2,375.1h-97.9V136.8h97.4c43.3,0,71.7,23.4,71.7,59.4c0,25.3-19.1,47.9-43.5,51.8v1.3c33.2,3.6,55.5,26.6,55.5,58.3 C383.4,349.7,352.1,375.1,300.2,375.1z M290.2,266.4h-50.1v78.4h52.3c34.2,0,52.3-13.7,52.3-39.5 C344.7,279.6,326.1,266.4,290.2,266.4z"/></svg>
+                </a>
                 <h3 class="tech">Bootstrap</h3>
               </div>
             </div>
-            <!-- ****************************************************PROJECTS -->
-            <div class="texto">
-              <h2 class="subtitulo" id="projects">
+<!-- *                                                                      PROJECTS -->
+            <div class="text">
+              <h2 id="projects" class="subtitulo">
                 <span id="projectWord"></span>
                 <div class="guion-bajo" id="consoleDos">&#95</div>
               </h2>
@@ -255,7 +269,6 @@
               </div>
             </div>
           </div>
-
           <footer class="footer" id="footer">
             <div class="copyright">
               <p>Copyright © 2021 All Rights Reserved <br> by Mazuca's Projects.</p>
